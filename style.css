@@ -108,3 +108,122 @@ footer {
 .project-card a:hover {
   text-decoration: underline;
 }
+.contact {
+  max-width: 600px;
+  margin: 3rem auto 4rem;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.contact h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.contact p {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #555;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.contact button {
+  display: block;
+  width: 100%;
+  padding: 0.8rem;
+  background: #6a0dad;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.contact button:hover {
+  opacity: 0.9;
+}
+
+.social-links {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.social-links a {
+  margin: 0 0.5rem;
+  text-decoration: none;
+  color: #6a0dad;
+  font-weight: bold;
+}
+
+.social-links a:hover {
+  text-decoration: underline;
+}
+/* Projects: switch to single column on tablets/mobile */
+@media (max-width: 768px) {
+  .project-grid {
+    grid-template-columns: 1fr;   /* one card per row */
+    gap: 1.5rem;                  /* a bit tighter spacing */
+  }
+}
+/* Global tweaks for smaller viewports */
+@media (max-width: 768px) {
+  body {
+    padding: 1rem;               /* less whitespace around edges */
+  }
+  header, footer {
+    padding: 1.5rem 1rem;
+  }
+  header h1 {
+    font-size: 1.8rem;           /* slightly smaller title */
+  }
+  .intro p, .about p {
+    font-size: 0.95rem;          /* easier to read on narrow screens */
+  }
+}
+
+/* Further tweaks for very small phones */
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+  header p {
+    font-size: 0.9rem;
+  }
+  .contact button {
+    font-size: 1rem;             /* button text fits better */
+  }
+}
+@media (max-width: 768px) {
+  .contact {
+    padding: 1rem;               /* less padding on mobile */
+  }
+  .form-group input,
+  .form-group textarea,
+  .contact button {
+    font-size: 1rem;             /* ensure tap‑friendly sizes */
+  }
+  .social-links a {
+    display: inline-block;
+    margin: 0.25rem 0;           /* stack links more tightly */
+  }
+}
